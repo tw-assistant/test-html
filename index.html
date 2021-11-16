@@ -15,7 +15,7 @@
 
     function load() {
         buttons.forEach(b => {
-            const button = document.getElementById("button_a");
+            const button = document.getElementById(b);
             button.addEventListener("click", () => modifyText(`clicked on '${b}'`), false);
         })
     }
