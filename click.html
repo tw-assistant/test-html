@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<script>
+    function modifyText(text) {
+        const lastEvent = document.getElementById("last_event");
+        lastEvent.firstChild.nodeValue = text;
+    }
+
+    function load() {
+        document.getElementById("btn").addEventListener("click", () => modifyText(`${Date.now()}`), false);
+    }
+
+    document.addEventListener("DOMContentLoaded", load, false);
+</script>
+
+<head>
+</head>
+
+<body>
+    <button id="btn">button</button>
+    <span id="last_event">last event...</span>
+</body>
+
+</html>
